@@ -30,12 +30,15 @@ extern "C" {
 #define AF_PAX_VT_CNT					(16)
 #define AF_PAX_HZ_CNT					(6)
 
+#define USE_2A_VER_DEV
+
 typedef enum
 {
     AEWB_ID_NONE = 0,
     AEWB_ID_APPRO,
     AEWB_ID_TI,
-    AEWB_ID_MAXNUM = 3
+    AEWB_ID_DEV,
+    AEWB_ID_MAXNUM
 
 }AEWB_VENDOR;
 

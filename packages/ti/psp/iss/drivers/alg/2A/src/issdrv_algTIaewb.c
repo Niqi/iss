@@ -37,7 +37,7 @@ aewDataEntry *aew_data 	= NULL;
 int aew_enable         	= AEW_ENABLE;
 int aewbFrames         	= 0;
 int awb_alg 			= TI_DSPRND_AWB;//TI_VSP_AWB; //TI_DSPRND_AWB;
-
+#if 0
 typedef enum{
 	DRV_IMGS_SENSOR_MODE_640x480 = 0,
 	DRV_IMGS_SENSOR_MODE_720x480,
@@ -51,7 +51,7 @@ typedef enum{
 	DRV_IMGS_SENSOR_MODE_2048x1536,
 	DRV_IMGS_SENSOR_MODE_2592x1920
 } DRV_IMGS_SENSOR_MODE;
-
+#endif
 
 #define FDC_ENABLED  1
 #define FDC_DISABLED 0
@@ -577,10 +577,10 @@ static void H3A_DEBUG_PRINT()
 	static int ShowCnt=0;
 	char line_buffer[200];
 	char word_buffer[20];
- 
+
 	ShowCnt ++;
 	if(ShowCnt == 600)
-	{	
+	{
 		Vps_printf("pixCtWin=%d,WinVNum=%d,WinHNum=%d,\n",
 			gALG_TI_aewbObj.IAEWB_StatMatdata.pixCtWin,
 			gALG_TI_aewbObj.IAEWB_StatMatdata.winCtVert,
@@ -597,7 +597,7 @@ static void H3A_DEBUG_PRINT()
 				strcat(line_buffer,word_buffer);
 			}
 			Vps_printf("%s",line_buffer);
-			cnt=cnt+gALG_TI_aewbObj.IAEWB_StatMatdata.winCtHorz; 
+			cnt=cnt+gALG_TI_aewbObj.IAEWB_StatMatdata.winCtHorz;
 		}
 
 		Vps_printf("=====G Data=====\n");
@@ -610,7 +610,7 @@ static void H3A_DEBUG_PRINT()
 				strcat(line_buffer,word_buffer);
 			}
 			Vps_printf("%s",line_buffer);
-			cnt=cnt+gALG_TI_aewbObj.IAEWB_StatMatdata.winCtHorz; 
+			cnt=cnt+gALG_TI_aewbObj.IAEWB_StatMatdata.winCtHorz;
 		}
 		Vps_printf("=====B Data=====\n");
 		cnt=0;
@@ -622,11 +622,11 @@ static void H3A_DEBUG_PRINT()
 				strcat(line_buffer,word_buffer);
 			}
 			Vps_printf("%s",line_buffer);
-			cnt=cnt+gALG_TI_aewbObj.IAEWB_StatMatdata.winCtHorz; 
+			cnt=cnt+gALG_TI_aewbObj.IAEWB_StatMatdata.winCtHorz;
 		}
 		Vps_printf("\n******* H3A DUMP END ********\n");
-	}	
-	
+	}
+
 }
 #endif
 
@@ -757,7 +757,7 @@ static void GETTING_RGB_BLOCK_VALUE(unsigned short * BLOCK_DATA_ADDR,
     	}
   }
 #endif
-#if defined(IMGS_SONY_IMX136) 
+#if defined(IMGS_SONY_IMX136)
   for(i = 0; i < (aew_win_hz_cnt * aew_win_vt_cnt)>>3;i ++){
     for(j = 0; j < 8; j ++){
       rgbData[i * 8 + j].r = aew_data[i].window_data[j][0] >> shift;
@@ -777,7 +777,18 @@ static void GETTING_RGB_BLOCK_VALUE(unsigned short * BLOCK_DATA_ADDR,
     	}
   }
 #endif
-#ifdef IMGS_SONY_IMX122 
+#if defined(IMGS_SONY_IMX291)
+  for(i = 0; i < (aew_win_hz_cnt * aew_win_vt_cnt)>>3;i ++){
+    for(j = 0; j < 8; j ++){
+      rgbData[i * 8 + j].r = aew_data[i].window_data[j][2] >> shift;
+      rgbData[i * 8 + j].b = aew_data[i].window_data[j][1] >> shift;
+      rgbData[i * 8 + j].g = (aew_data[i].window_data[j][0]
+      + aew_data[i].window_data[j][3]+ 1) >> (1 + shift) ;
+    	}
+  }
+#endif
+
+#ifdef IMGS_SONY_IMX122
   for(i = 0; i < (aew_win_hz_cnt * aew_win_vt_cnt)>>3;i ++){
     for(j = 0; j < 8; j ++){
       rgbData[i * 8 + j].r = aew_data[i].window_data[j][0] >> shift;
@@ -876,6 +887,11 @@ static void GETTING_RGB_BLOCK_VALUE_Y(unsigned short * BLOCK_DATA_ADDR, short *y
       g = (pAewbWinData->subSampleAcc[1] + pAewbWinData->subSampleAcc[2]) >> (1+shift);
       r = pAewbWinData->subSampleAcc[0] >> shift;
       b = pAewbWinData->subSampleAcc[3] >> shift;
+#elif defined IMGS_SONY_IMX291
+	  g = (pAewbWinData->subSampleAcc[1] + pAewbWinData->subSampleAcc[2]) >> (1+shift);
+	  r = pAewbWinData->subSampleAcc[0] >> shift;
+	  b = pAewbWinData->subSampleAcc[3] >> shift;
+
 #else
       g = (pAewbWinData->subSampleAcc[0] + pAewbWinData->subSampleAcc[3]) >> (1+shift);
       r = pAewbWinData->subSampleAcc[1] >> shift;

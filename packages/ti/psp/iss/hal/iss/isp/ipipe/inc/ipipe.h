@@ -144,6 +144,18 @@ typedef uint32 ipipe_module;
 
 #define IPIPE_YUV444_YUV422_FLAG (1<<IPIPE_YUV444_YUV422)
 
+/* add by Jerry 2016.6.12 */
+typedef struct {
+	uint32 rGain;
+	uint32 grGain;
+	uint32 gbGain;
+	uint32 bGain;
+	int	Ofset_R;
+	int	Ofset_GR;
+	int	Ofset_GB;
+	int	Ofset_B;
+} DRV_IpipeWb;
+
 typedef uint32 ipipe_filter_flag;
 
 /* ================================================================ */
@@ -2451,6 +2463,8 @@ ISP_RETURN ipipe_get_config_yuv444_to_yuv422(ipipe_yuv444_yuv422_cfg_t * cfg);
  *  ==================================================================
  */
 ISP_RETURN ipipe_get_3dlut(uint32 * tbl_addr, uint8 table);
+
+int DEV2A_capt2AUpdate(DRV_IpipeWb *In2Adata);
 
 #ifdef __cplusplus
 }

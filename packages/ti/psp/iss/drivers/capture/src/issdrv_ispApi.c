@@ -854,7 +854,7 @@ Int32 IspDrv_processReq(Iss_IspObj *pObj)
 				Vps_rprintf("\n%s:%d\n", __func__, __LINE__, "Address is NULL\n");
 				return FVID2_EBADARGS;
 			}
-				
+
 		if (!ispDrvIsYUV422ILEFormat(pObj->outDataFmt1))
 			if (NULL == outAddrBC)
 			{
@@ -1268,6 +1268,8 @@ Void ispDrvSetOneShotMode(Iss_IspObj *pObj)
 #elif defined(IMGS_SONY_IMX104)
 	ipipe_reg->SRC_COL = 0x4E;
 #elif defined(IMGS_SONY_IMX136)
+	ipipe_reg->SRC_COL = 0xE4;
+#elif defined(IMGS_SONY_IMX291)
 	ipipe_reg->SRC_COL = 0xE4;
 #else
     Iss_ispWriteReg(&ipipe_reg->SRC_COL,3,0,2);                                 // EE -> B

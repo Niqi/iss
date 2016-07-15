@@ -1,12 +1,12 @@
 /** ==================================================================
- *  @file   iss_device.h                                                  
- *                                                                    
- *  @path   /ti/psp/devices/                                                  
- *                                                                    
- *  @desc   This  File contains.                                      
+ *  @file   iss_device.h
+ *
+ *  @path   /ti/psp/devices/
+ *
+ *  @desc   This  File contains.
  * ===================================================================
- *  Copyright (c) Texas Instruments Inc 2011, 2012                    
- *                                                                    
+ *  Copyright (c) Texas Instruments Inc 2011, 2012
+ *
  *  Use of this software is controlled by the terms and conditions found
  *  in the license agreement under which this software has been supplied
  * ===================================================================*/
@@ -36,19 +36,19 @@ extern "C" {
 #endif /* __cplusplus */
 #define _ISS_VIDEO_DEVICE_H_
 
-/* ========================================================================== 
+/* ==========================================================================
  */
 /* Include Files */
-/* ========================================================================== 
+/* ==========================================================================
  */
 
 #include <ti/psp/iss/iss.h>
 #include <ti/psp/devices/vps_device.h>
 
-/* ========================================================================== 
+/* ==========================================================================
  */
 /* Macros & Typedefs */
-/* ========================================================================== 
+/* ==========================================================================
  */
 
 /**
@@ -80,6 +80,7 @@ extern "C" {
 #define FVID2_ISS_SENSOR_OV2710_DRV		(ISS_SENSOR_DRV_BASE + 0x0012u)
 #define FVID2_ISS_SENSOR_IMX122_DRV		(ISS_SENSOR_DRV_BASE + 0x0013u)		/* Sony IMX-122 Sensor */
 #define FVID2_ISS_SENSOR_IMX140_DRV		(ISS_SENSOR_DRV_BASE + 0x0014u)		/* Sony IMX-140 Sensor */
+#define FVID2_ISS_SENSOR_IMX291_DRV		(ISS_SENSOR_DRV_BASE + 0x0015u)		/* Sony IMX-291 Sensor */
 
 
 //#ifdef DM385
@@ -294,10 +295,10 @@ extern "C" {
 
 /* @} */
 
-/* ========================================================================== 
+/* ==========================================================================
  */
 /* Structure Declarations */
-/* ========================================================================== 
+/* ==========================================================================
  */
 
 /**
@@ -321,10 +322,10 @@ typedef struct {
     /**< Indicates whether I2C initialization is required */
 } Iss_DeviceInitParams;
 
-/* ========================================================================== 
+/* ==========================================================================
  */
 /* Functions */
-/* ========================================================================== 
+/* ==========================================================================
  */
 
 /**
@@ -341,24 +342,24 @@ typedef struct {
   \return FVID2_SOK on success, else failure
 */
 /* ===================================================================
- *  @func     Iss_deviceInit                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     Iss_deviceInit
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 Int32 Iss_deviceInit(Vps_DeviceInitParams * pPrm);
 
 /**
@@ -367,24 +368,24 @@ Int32 Iss_deviceInit(Vps_DeviceInitParams * pPrm);
   \return FVID2_SOK on success, else failure
 */
 /* ===================================================================
- *  @func     Iss_deviceDeInit                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     Iss_deviceDeInit
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 Int32 Iss_deviceDeInit();
 
 /**
@@ -432,6 +433,15 @@ Int32 Iss_deviceWrite16(UInt32 i2cInstId, UInt32 i2cDevAddr,
                         const UInt16 * regAddr,
                         const UInt16 * regValue, UInt32 numRegs);
 
+
+Int32 Iss_device16Read8(UInt32 instId, UInt32 devAddr,
+                       const UInt16 * regAddr,
+                       UInt8 * regValue, UInt32 numRegs);
+
+Int32 Iss_device16Write8(UInt32 instId, UInt32 devAddr,
+                        const UInt16 * regAddr,
+                        const UInt8 * regValue, UInt32 numRegs);
+
 #ifdef CBB_PLATFORM
 Int32 iss_gpio_write_data(UInt32 band, UInt32 io_no, UInt32 data);
 #endif
@@ -439,7 +449,7 @@ Int32 iss_gpio_write_data(UInt32 band, UInt32 io_no, UInt32 data);
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */
-#endif                                                     /* _ISS_VIDEO_DEVICE_H_ 
+#endif                                                     /* _ISS_VIDEO_DEVICE_H_
                                                             */
 
 /* @} */

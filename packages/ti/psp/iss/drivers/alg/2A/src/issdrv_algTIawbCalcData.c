@@ -1,12 +1,12 @@
 /** ==================================================================
- *  @file   issdrv_algTIawbCalcData.c                                                  
- *                                                                    
- *  @path    /proj/vsi/users/venu/DM812x/IPNetCam_rel_1_8/ti_tools/iss_02_bkup/packages/ti/psp/iss/drivers/alg/2A/src/                                                 
- *                                                                    
- *  @desc   This  File contains.                                      
+ *  @file   issdrv_algTIawbCalcData.c
+ *
+ *  @path    /proj/vsi/users/venu/DM812x/IPNetCam_rel_1_8/ti_tools/iss_02_bkup/packages/ti/psp/iss/drivers/alg/2A/src/
+ *
+ *  @desc   This  File contains.
  * ===================================================================
- *  Copyright (c) Texas Instruments Inc 2011, 2012                    
- *                                                                    
+ *  Copyright (c) Texas Instruments Inc 2011, 2012
+ *
  *  Use of this software is controlled by the terms and conditions found
  *  in the license agreement under which this software has been supplied
  * ===================================================================*/
@@ -62,6 +62,9 @@
 #endif
 #ifdef IMGS_SONY_IMX104
 #include "issdrv_algTIawbCalcData_IMX104.c"
+#endif
+#ifdef IMGS_SONY_IMX291
+#include "issdrv_algTIawbCalcData_IMX291.c"
 #endif
 #ifdef IMGS_OMNIVISION_OV7740
 #include "issdrv_algTIawbCalcData_default.c"

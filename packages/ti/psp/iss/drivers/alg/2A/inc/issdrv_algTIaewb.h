@@ -31,6 +31,21 @@ extern "C" {
 /* Macro to enable debug cpabilites in AEWB algorith */
 //#define ALG_AEWB_DEBUG
 
+/* add by Jerry 2016.6.12 */
+typedef enum{
+	DRV_IMGS_SENSOR_MODE_640x480 = 0,
+	DRV_IMGS_SENSOR_MODE_720x480,
+	DRV_IMGS_SENSOR_MODE_800x600,
+	DRV_IMGS_SENSOR_MODE_1024x768,
+	DRV_IMGS_SENSOR_MODE_1280x720,
+	DRV_IMGS_SENSOR_MODE_1280x960,
+	DRV_IMGS_SENSOR_MODE_1280x1024,
+	DRV_IMGS_SENSOR_MODE_1600x1200,
+	DRV_IMGS_SENSOR_MODE_1920x1080,
+	DRV_IMGS_SENSOR_MODE_2048x1536,
+	DRV_IMGS_SENSOR_MODE_2592x1920
+} DRV_IMGS_SENSOR_MODE;
+
 
 #define TI_DSPRND_AWB (0)
 #define TI_VSP_AWB    (1)
@@ -203,24 +218,24 @@ typedef struct{
 ********************************************************************************
 */
 /* ===================================================================
- *  @func     ALG_aewbCreate                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ALG_aewbCreate
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 void *ALG_aewbCreate(int aewbNumWinH,int aewbNumWinV,int aewbNumPix);
 /**
 ********************************************************************************
@@ -236,24 +251,24 @@ void *ALG_aewbCreate(int aewbNumWinH,int aewbNumWinV,int aewbNumPix);
 ********************************************************************************
 */
 /* ===================================================================
- *  @func     ALG_aewbRun                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ALG_aewbRun
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 int ALG_aewbRun(void *h3aDataVirtAddr);
 /**
 ********************************************************************************
@@ -267,44 +282,44 @@ int ALG_aewbRun(void *h3aDataVirtAddr);
 ********************************************************************************
 */
 /* ===================================================================
- *  @func     ALG_aewbDelete                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ALG_aewbDelete
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 int ALG_aewbDelete(void *hndl);
 /* ===================================================================
- *  @func     ALG_aewbControl                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ALG_aewbControl
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 int ALG_aewbControl(void);
 
 #ifdef __cplusplus

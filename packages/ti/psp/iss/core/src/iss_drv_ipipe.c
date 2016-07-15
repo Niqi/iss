@@ -1,12 +1,12 @@
 /** ==================================================================
- *  @file   iss_drv_ipipe.c                                                  
- *                                                                    
- *  @path   /ti/psp/iss/core/src/                                                  
- *                                                                    
- *  @desc   This  File contains.                                      
+ *  @file   iss_drv_ipipe.c
+ *
+ *  @path   /ti/psp/iss/core/src/
+ *
+ *  @desc   This  File contains.
  * ===================================================================
- *  Copyright (c) Texas Instruments Inc 2011, 2012                    
- *                                                                    
+ *  Copyright (c) Texas Instruments Inc 2011, 2012
+ *
  *  Use of this software is controlled by the terms and conditions found
  *  in the license agreement under which this software has been supplied
  * ===================================================================*/
@@ -40,24 +40,24 @@ const IPIPE_RAW_PIXEL_COLOR_FMT_T color_pattern[4][4] = {
 };
 
 /* ===================================================================
- *  @func     issIpipePreviewParamsInit                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     issIpipePreviewParamsInit
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN issIpipePreviewParamsInit(ipipe_cfg_t * cfg,
                                      iss_config_params_t * iss_cfg_params,
                                      in_frame_sizes_t * sizes)
@@ -157,7 +157,7 @@ ISP_RETURN issIpipePreviewParamsInit(ipipe_cfg_t * cfg,
     cfg->src_cfg->dims.vps = 8;
     cfg->src_cfg->dims.v_size = sizes->v_size_crop;
 #endif
-#ifdef IMGS_MICRON_MT9M034_DUAL_HEAD_BOARD	
+#ifdef IMGS_MICRON_MT9M034_DUAL_HEAD_BOARD
     cfg->src_cfg->dims.hps = 0;
     cfg->src_cfg->dims.hsz = sizes->h_size_crop;
     cfg->src_cfg->dims.vps = 8;
@@ -169,6 +169,13 @@ ISP_RETURN issIpipePreviewParamsInit(ipipe_cfg_t * cfg,
     cfg->src_cfg->dims.vps = 13;
     cfg->src_cfg->dims.v_size = sizes->v_size_crop;
 #endif
+#ifdef IMGS_SONY_IMX291
+    cfg->src_cfg->dims.hps = 300;
+    cfg->src_cfg->dims.hsz = sizes->h_size_crop;
+    cfg->src_cfg->dims.vps = 20;
+    cfg->src_cfg->dims.v_size = sizes->v_size_crop;
+#endif
+
 #ifdef IMGS_SONY_IMX104
     cfg->src_cfg->dims.hps = 0;
     cfg->src_cfg->dims.hsz = sizes->h_size_crop;
@@ -180,7 +187,7 @@ ISP_RETURN issIpipePreviewParamsInit(ipipe_cfg_t * cfg,
     cfg->src_cfg->dims.hsz = sizes->h_size_crop;
     cfg->src_cfg->dims.vps = 1;
     cfg->src_cfg->dims.v_size = sizes->v_size_crop;
-#endif  
+#endif
 #ifdef IMGS_OMNIVISION_OV2710
     cfg->src_cfg->dims.hps = 80;
     cfg->src_cfg->dims.hsz = sizes->h_size_crop;
@@ -206,24 +213,24 @@ ISP_RETURN issIpipePreviewParamsInit(ipipe_cfg_t * cfg,
 }
 
 /* ===================================================================
- *  @func     issIpipeConfigProcessing                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     issIpipeConfigProcessing
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN issIpipeConfigProcessing(ipipe_cfg_t * cfg,
                                     iss_config_processing_t * iss_config)
 {
@@ -347,24 +354,24 @@ ISP_RETURN issIpipeConfigProcessing(ipipe_cfg_t * cfg,
 }
 
 /* ===================================================================
- *  @func     issIpipeCaptureParamsInitNoWrite                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     issIpipeCaptureParamsInitNoWrite
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN issIpipeCaptureParamsInitNoWrite(ipipe_cfg_t * cfg,
                                             iss_config_processing_t *
                                             iss_config,

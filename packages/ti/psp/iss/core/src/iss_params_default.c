@@ -1654,7 +1654,7 @@ IssIsifFillDefaultParams(iss_config_processing_t * iss_config)
 
 #if defined(APPRO_SENSOR_VENDOR) && defined(IMGS_SONY_IMX136)
 	iss_config->msb_pos = IPIPE_BAYER_MSB_BIT13;
-#elif defined SENSOR_12BIT	
+#elif defined SENSOR_12BIT
     iss_config->msb_pos = IPIPE_BAYER_MSB_BIT11;
 #else
     iss_config->msb_pos = IPIPE_BAYER_MSB_BIT9;
@@ -1672,6 +1672,8 @@ IssIsifFillDefaultParams(iss_config_processing_t * iss_config)
 #else
     iss_config->clamp->dcoffset_clamp_value = (uint16)-212;
 #endif
+#elif defined IMGS_SONY_IMX291
+    iss_config->clamp->dcoffset_clamp_value = (uint16)-240;
 #elif defined IMGS_SONY_IMX140
     iss_config->clamp->dcoffset_clamp_value = (uint16)-212;
 #elif defined IMGS_MICRON_MT9M034

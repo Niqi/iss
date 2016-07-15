@@ -47,7 +47,7 @@
 #include <ti/psp/iss/alg/dcc/inc/idcc.h>
 #include <ti/psp/iss/drivers/capture/src/issdrv_capturePriv.h>
 
-
+#include <ti/psp/iss/alg/aewb/dev2a/imx291/snsaewb.h>
 
 extern ti2a_output ti2a_output_params;
 
@@ -75,41 +75,41 @@ UInt32 rgb_3d_lut_table[729];
 const uint32 iss_3d_lut_r_table_6500K[] = {
 	#include "./3DLUT/Camera_3DLUT_6500K_R.txt"
 };
-const uint32 iss_3d_lut_g_table_6500K[] = { 
-	#include "./3DLUT/Camera_3DLUT_6500K_G.txt" 
+const uint32 iss_3d_lut_g_table_6500K[] = {
+	#include "./3DLUT/Camera_3DLUT_6500K_G.txt"
 };
-const uint32 iss_3d_lut_b_table_6500K[] = { 
-	#include "./3DLUT/Camera_3DLUT_6500K_B.txt" 
+const uint32 iss_3d_lut_b_table_6500K[] = {
+	#include "./3DLUT/Camera_3DLUT_6500K_B.txt"
 };
 
 const uint32 iss_3d_lut_r_table_5000K[] = {
 	#include "./3DLUT/Camera_3DLUT_5000K_R.txt"
 };
-const uint32 iss_3d_lut_g_table_5000K[] = { 
-	#include "./3DLUT/Camera_3DLUT_5000K_G.txt" 
+const uint32 iss_3d_lut_g_table_5000K[] = {
+	#include "./3DLUT/Camera_3DLUT_5000K_G.txt"
 };
-const uint32 iss_3d_lut_b_table_5000K[] = { 
-	#include "./3DLUT/Camera_3DLUT_5000K_B.txt" 
-};
-
-const uint32 iss_3d_lut_r_table_A[] = { 
-	#include "./3DLUT/Camera_3DLUT_A_R.txt" 
-};
-const uint32 iss_3d_lut_g_table_A[] = { 
-	#include "./3DLUT/Camera_3DLUT_A_G.txt" 
-};
-const uint32 iss_3d_lut_b_table_A[] = { 
-	#include "./3DLUT/Camera_3DLUT_A_B.txt" 
+const uint32 iss_3d_lut_b_table_5000K[] = {
+	#include "./3DLUT/Camera_3DLUT_5000K_B.txt"
 };
 
-const uint32 iss_3d_lut_r_table_TL84[] = { 
-	#include "./3DLUT/Camera_3DLUT_TL84_R.txt" 
+const uint32 iss_3d_lut_r_table_A[] = {
+	#include "./3DLUT/Camera_3DLUT_A_R.txt"
 };
-const uint32 iss_3d_lut_g_table_TL84[] = { 
-	#include "./3DLUT/Camera_3DLUT_TL84_G.txt" 
+const uint32 iss_3d_lut_g_table_A[] = {
+	#include "./3DLUT/Camera_3DLUT_A_G.txt"
 };
-const uint32 iss_3d_lut_b_table_TL84[] = { 
-	#include "./3DLUT/Camera_3DLUT_TL84_B.txt" 
+const uint32 iss_3d_lut_b_table_A[] = {
+	#include "./3DLUT/Camera_3DLUT_A_B.txt"
+};
+
+const uint32 iss_3d_lut_r_table_TL84[] = {
+	#include "./3DLUT/Camera_3DLUT_TL84_R.txt"
+};
+const uint32 iss_3d_lut_g_table_TL84[] = {
+	#include "./3DLUT/Camera_3DLUT_TL84_G.txt"
+};
+const uint32 iss_3d_lut_b_table_TL84[] = {
+	#include "./3DLUT/Camera_3DLUT_TL84_B.txt"
 };
 //#define TWOA_PROFILE
 
@@ -251,19 +251,14 @@ Int32 IssAlg_capt2ASetColor(Fdrv_Handle handle,Ptr cmdArgs)
  *  ==================================================================
  */
 Int32 IssAlg_capt2ASetAEWBVendor(Fdrv_Handle handle,Ptr cmdArgs)
-
 {
-
     Iss_2AObj *pObj = gpIssAlg2AObj;
 
-
-
     pObj->aewbVendor = (AEWB_VENDOR)(*((UInt32*)cmdArgs));
-
-
-
+#ifdef USE_2A_VER_DEV
+	pObj->aewbVendor = AEWB_ID_DEV;
+#endif
     return FVID2_SOK;
-
 }
 
 
@@ -1145,7 +1140,7 @@ Int32 IssAlg_capt2AProcessTI(Iss_2AObj *pObj)
 						rgb_3d_lut_table[i3dlut] |= (iss_3d_lut_g_table_TL84[i3dlut]& 0x3FF) << 10;
 						rgb_3d_lut_table[i3dlut] |= (iss_3d_lut_b_table_TL84[i3dlut]& 0x3FF);
 					}
-				} else if(index == 0) { 
+				} else if(index == 0) {
 					for(i3dlut = 0 ; i3dlut< 729 ; i3dlut ++) {
 						rgb_3d_lut_table[i3dlut] = (iss_3d_lut_r_table_A[i3dlut] & 0x3FF) << 20;
 						rgb_3d_lut_table[i3dlut] |= (iss_3d_lut_g_table_A[i3dlut]& 0x3FF) << 10;
@@ -1238,7 +1233,7 @@ Int32 IssAlg_capt2AProcessTI(Iss_2AObj *pObj)
             output_params.iss_drv_config->ipipe_cfg.gbce_params = (ipipe_gbce_cfg_t* )&gbce_iss_default_params;
             output_params.iss_drv_config->ipipe_cfg.filter_flag |= (IPIPE_GBCE_FLAG);
 
-            static ipipe_gamma_cfg_t gamma_cfg = 
+            static ipipe_gamma_cfg_t gamma_cfg =
             {IPIPE_GAMMA_TBL_512, 0, IPIPE_GAMMA_BYPASS_DISABLE, IPIPE_GAMMA_BYPASS_DISABLE, IPIPE_GAMMA_BYPASS_DISABLE, NULL, NULL, NULL};
             gamma_cfg.red_table = gamma_cfg.green_table = gamma_cfg.blue_table = (int16 *)gamma_iss_default_table;
             ipipe_config_gamma(&gamma_cfg);
@@ -1877,66 +1872,94 @@ Int32 IssAlg_capt2AProcess(Iss_2AObj *pObj)
 Void IssAlg_captTsk2A(UArg arg0,UArg arg1)
 
 {
-
+	StPgApiEwfiPrerunParam gstEwfiPrerunParam;
     Iss_2AObj *pObj = (Iss_2AObj*)arg0;
-
     static int count = 0;
 
-
+	if(pObj->aewbVendor == AEWB_ID_DEV){
+		gstEwfiPrerunParam.ucSensrEnable = 1;
+		gstEwfiPrerunParam.ucSensrChipId = 1;
+		gstEwfiPrerunParam.ucSensrFovMod = DRV_IMGS_SENSOR_MODE_1920x1080;
+		gstEwfiPrerunParam.ucSensrFovFps = 25;
+		gstEwfiPrerunParam.ucAewbVendor  = 1;
+		gstEwfiPrerunParam.ucSensrBinMod = 0;
+		gstEwfiPrerunParam.ucSysPowerHzMod=1;
+		SnAewb_AewbPrerun(&gstEwfiPrerunParam);
+	}
     /* allocate H3A temp memory */
-
     pObj->pH3AMem = memalign(64,20 * pObj->aewbNumWinV * pObj->aewbNumWinH);
-
-    if (pObj->pH3AMem == NULL)
-    {
-
-        Vps_rprintf ( " %s:%d: pObj->pH3AMem is NULL.. memalign failed !!!\n", __FUNCTION__,
-
-                        __LINE__ );
+    if (pObj->pH3AMem == NULL){
+        Vps_rprintf(" %s:%d: pObj->pH3AMem is NULL.. memalign failed !!!\n", __FUNCTION__,__LINE__ );
     }
 
-    /* Create AEWB algorithm instance */
-
-    pObj->pAlgHndl = (Void*)ALG_aewbCreate(pObj->aewbNumWinH, pObj->aewbNumWinV,pObj->aewbNumPix);
-
-
-
-    if(pObj->pAlgHndl == NULL)
-
-    {
-
-        Vps_rprintf ( " %s:%d: 2A alg instance create failed !!!\n", __FUNCTION__,
-
-                        __LINE__ );
-
+	if(pObj->aewbVendor == AEWB_ID_DEV){
+		StPgApiEwfiCreateParam lstEwfiCreateParam;
+		lstEwfiCreateParam.usAlgId 			= 1;
+		lstEwfiCreateParam.usSensrFovMode	= 1;
+		lstEwfiCreateParam.usSensrFovFps 	= 25;
+		lstEwfiCreateParam.usVnfDemoCfg 	= FALSE;
+		lstEwfiCreateParam.usAewbType 		= 3;
+		lstEwfiCreateParam.usAewbVendor 	= 1;
+		lstEwfiCreateParam.usAewbPriority 	= 0;
+		lstEwfiCreateParam.usBinMode 		= 0;
+		lstEwfiCreateParam.usReduceShutter 	= 0;
+		lstEwfiCreateParam.usSaldre 		= 0;
+		lstEwfiCreateParam.usFlickerType 	= 1;
+		lstEwfiCreateParam.usShiftValue 	= 0;
+		pObj->pAlgHndl = SnAewb_AewbCreate(&lstEwfiCreateParam);
+	}
+	else{
+	    /* Create AEWB algorithm instance */
+	    pObj->pAlgHndl = (Void*)ALG_aewbCreate(pObj->aewbNumWinH, pObj->aewbNumWinV,pObj->aewbNumPix);
+	}
+	if(pObj->pAlgHndl == NULL){
+        Vps_rprintf ( " %s:%d: 2A alg instance create failed !!!\n", __FUNCTION__, __LINE__ );
         GT_assert(GT_DEFAULT_MASK,pObj->pAlgHndl != NULL);
-
     }
-
-
 
 #ifdef ISS_CAPT_DEBUG
-
-    Vps_rprintf ( " %s:%d: 2A task Main function Entered !!!\n", __FUNCTION__,
-
-                    __LINE__ );
-
+    Vps_rprintf ( " %s:%d: 2A task Main function Entered !!!\n", __FUNCTION__,__LINE__ );
 #endif
+	if(pObj->aewbVendor == AEWB_ID_DEV)
+	{
+		// 曝光,自动
+		SnAewb_UiSetShutrCtrlMode(0);
+		SnAewb_UiSetMaxShutr4Auto(40000);
+		SnAewb_UiSetMinShutr4Auto(1000);
+		//SnAewb_UiSetFixShutr4Manu(40000);
+
+		// 增益,自动
+		SnAewb_UiSetGainCtrlMode(0);
+		//SnAewb_UiSetFixGain4Manu(0);
+
+		/* 锐度,亮度,色饱和度,对比度*/
+		SnAewb_UiSetSharpness(50);
+		SnAewb_UiSetBrtness(50);
+		SnAewb_UiSetSatDgr(50);
+		SnAewb_UiSetContrast(50);
+
+		/* 白天,彩色 */
+		SnAewb_UiSetDayNightStat(0);
+		SnAewb_UiSetNightColorMode(0);
 
 
+		/* 背光补偿 */
+		SnAewb_UiSetHlcCtrl(1);
 
-    while(pObj->exitFlag == FALSE)
-
-    {
-
+		/* 白平衡模式 */
+		SnAewb_UiSetWbCtrlMode(0);
+	}
+    while(pObj->exitFlag == FALSE){
         /* wait for 2A sem */
-
         Semaphore_pend(pObj->sem,BIOS_WAIT_FOREVER);
-
-        if(pObj->exitFlag == FALSE)
-        {
-            /* Got new H3A data apply 2A algorithm */
-            IssAlg_capt2AProcess(pObj);
+        if(pObj->exitFlag == FALSE){
+			if(pObj->aewbVendor == AEWB_ID_DEV){
+				SnAewb_AewbRun(pObj->pAlgHndl, (void *)(&pObj->fullH3ABufAddr),0,0);
+			}
+			else{
+	            /* Got new H3A data apply 2A algorithm */
+	            IssAlg_capt2AProcess(pObj);
+			}
 
             /*
              *  Save the current AF H3A buffer address to be used for Focus value
@@ -1945,33 +1968,26 @@ Void IssAlg_captTsk2A(UArg arg0,UArg arg1)
             gFocusStatistics.pCurAFDataAddr = (Void*)(pObj->fullH3ABufAddr + pObj->h3aBufSize);
 
             count ++;
-            if ((count % 60) == 0)
-            {
+            if ((count % 60) == 0){
                 pObj->AFValue = ALG_afRun((Void*)(pObj->fullH3ABufAddr + pObj->h3aBufSize));
             }
-
         }
-
     }
-
     /* Delete the 2A alg instance */
-
-    ALG_aewbDelete(pObj->pAlgHndl);
+	if(pObj->aewbVendor == AEWB_ID_DEV){
+		SnAewb_AewbDelete(pObj->pAlgHndl);
+	}
+	else{
+    	ALG_aewbDelete(pObj->pAlgHndl);
+	}
 
     //Appro2ARelease();
 
     /* free H3A temp memory */
-
     free(pObj->pH3AMem);
 
-
-
 #ifdef ISS_CAPT_DEBUG
-
-    Vps_rprintf ( " %s:%d: 2A task Main function Exited !!!\n", __FUNCTION__,
-
-                    __LINE__ );
-
+    Vps_rprintf ( " %s:%d: 2A task Main function Exited !!!\n", __FUNCTION__,__LINE__ );
 #endif
 }
 

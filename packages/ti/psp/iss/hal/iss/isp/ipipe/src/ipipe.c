@@ -42,46 +42,46 @@ ipipe_dev_data_t ipipe_dev;
 ********************************************************/
 
 /* ===================================================================
- *  @func     ipipe_sub_module_clk_enable                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_sub_module_clk_enable
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 static ISP_RETURN ipipe_sub_module_clk_enable(ipipe_module_clk clk_module,
                                               IPIPE_MODULE_CLK_CTRL_T enable);
 
 /* ===================================================================
- *  @func     ipipe_clk_reset                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_clk_reset
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 static ISP_RETURN ipipe_clk_reset();
 
 /* ================================================================ */
@@ -96,24 +96,24 @@ static ISP_RETURN ipipe_clk_reset();
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_init                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_init
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_init()
 {
 
@@ -138,24 +138,24 @@ ISP_RETURN ipipe_init()
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_open                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_open
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_open()
 {
 
@@ -206,24 +206,24 @@ ISP_RETURN ipipe_open()
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_close                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_close
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_close()
 {
 
@@ -270,24 +270,24 @@ ISP_RETURN ipipe_close()
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_validate_params                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_validate_params
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_validate_params(ipipe_cfg_t * ipipe_config)
 {
 
@@ -296,24 +296,24 @@ ISP_RETURN ipipe_validate_params(ipipe_cfg_t * ipipe_config)
 }
 
 /* ===================================================================
- *  @func     ipipe_config_filters                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_filters
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_filters(ipipe_cfg_t * ipipe_config)
 {
     ISP_RETURN retval = ISP_SUCCESS;
@@ -486,24 +486,24 @@ ISP_RETURN ipipe_config_filters(ipipe_cfg_t * ipipe_config)
 /*================================================================== */
 
 /* ===================================================================
- *  @func     ipipe_config                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config(ipipe_cfg_t * ipipe_config)
 {
 
@@ -537,24 +537,24 @@ ISP_RETURN ipipe_config(ipipe_cfg_t * ipipe_config)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_start                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_start
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_start(IPIPE_START_T enable)
 {
 
@@ -584,7 +584,7 @@ ISP_RETURN ipipe_start(IPIPE_START_T enable)
                       CSL_IPIPE_SRC_EN_EN_SHIFT, CSL_IPIPE_SRC_EN_EN_MASK);
             break;
         default:
-            status = ISP_INVALID_INPUT;                    // incorrect input 
+            status = ISP_INVALID_INPUT;                    // incorrect input
                                                            // parameter
     }
 
@@ -605,24 +605,24 @@ ISP_RETURN ipipe_start(IPIPE_START_T enable)
 /*================================================================== */
 
 /* ===================================================================
- *  @func     ipipe_config_DPC_lut                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_DPC_lut
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_DPC_lut(ipipe_dpc_lut_cfg_t * cfg)
 {
     if (cfg == NULL)
@@ -659,24 +659,24 @@ ISP_RETURN ipipe_config_DPC_lut(ipipe_dpc_lut_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_DPC_otf                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_DPC_otf
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_DPC_otf(ipipe_dpc_otf_cfg_t * cfg)
 {
 
@@ -730,23 +730,23 @@ ISP_RETURN ipipe_config_DPC_otf(ipipe_dpc_otf_cfg_t * cfg)
 		ISP_WRITE32(ipipe_reg->DPC_OTF_3_D_SLP, cfg->dpc_data.dpc3_params.dett.d_slp);
 		ISP_WRITE32(ipipe_reg->DPC_OTF_3_D_MIN, cfg->dpc_data.dpc3_params.dett.d_min);
 		ISP_WRITE32(ipipe_reg->DPC_OTF_3_D_MAX, cfg->dpc_data.dpc3_params.dett.d_max);
-		
+
 		ISP_WRITE32(ipipe_reg->DPC_OTF_3_C_THR, cfg->dpc_data.dpc3_params.corr.d_thr);
 		ISP_WRITE32(ipipe_reg->DPC_OTF_3_C_SLP, cfg->dpc_data.dpc3_params.corr.d_slp);
 		ISP_WRITE32(ipipe_reg->DPC_OTF_3_C_MIN, cfg->dpc_data.dpc3_params.corr.d_min);
 		ISP_WRITE32(ipipe_reg->DPC_OTF_3_C_MAX, cfg->dpc_data.dpc3_params.corr.d_max);
 
-        /* 
+        /*
          * ISP_SET32(IPIPE_DPC_OTF_3_D_THR,cfg->dpc_data.dpc3_params.otf3d.thr,CSL_IPIPE_DPC_OTF_3_D_THR_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_D_THR_VAL_MASK);
          * ISP_SET32(IPIPE_DPC_OTF_3_D_SPL,cfg->dpc_data.dpc3_params.otf3d.d_slp,CSL_IPIPE_DPC_OTF_3_D_SPL_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_D_SPL_VAL_MASK);
          * ISP_SET32(IPIPE_DPC_OTF_3_D_MAX,cfg->dpc_data.dpc3_params.otf3d.d_max,CSL_IPIPE_DPC_OTF_3_D_MAX_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_D_MAX_VAL_MASK);
          * ISP_SET32(IPIPE_DPC_OTF_3_D_MIN,cfg->dpc_data.dpc3_params.otf3d.d_min,CSL_IPIPE_DPC_OTF_3_D_MIN_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_D_MAX_VAL_MASK);
-         * 
+         *
          * ISP_SET32(IPIPE_DPC_OTF_3_C_THR,cfg->dpc_data.dpc3_params.otf3d.thr,CSL_IPIPE_DPC_OTF_3_C_THR_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_C_THR_VAL_MASK);
          * ISP_SET32(IPIPE_DPC_OTF_3_C_SLP,cfg->dpc_data.dpc3_params.otf3d.d_slp,CSL_IPIPE_DPC_OTF_3_C_SPL_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_C_SPL_VAL_MASK);
          * ISP_SET32(IPIPE_DPC_OTF_3_C_MAX,cfg->dpc_data.dpc3_params.otf3d.d_max,CSL_IPIPE_DPC_OTF_3_C_MAX_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_C_MAX_VAL_MASK);
          * ISP_SET32(IPIPE_DPC_OTF_3_C_MIN,cfg->dpc_data.dpc3_params.otf3d.d_min,CSL_IPIPE_DPC_OTF_3_C_MIN_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_C_MAX_VAL_MASK);
-         * 
+         *
          */
     }
 
@@ -767,24 +767,24 @@ ISP_RETURN ipipe_config_DPC_otf(ipipe_dpc_otf_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_noise_filter                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_noise_filter
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_noise_filter(IPIPE_NOISE_FILTER_T noise_filter,
                                      ipipe_noise_filter_cfg_t * cfg)
 {
@@ -854,9 +854,9 @@ ISP_RETURN ipipe_config_noise_filter(IPIPE_NOISE_FILTER_T noise_filter,
     for (i = 0; i < 8; i++)
     {
         ISP_WRITE32(*reg, *thr);
-        reg++;                                             /* increases by 32 
+        reg++;                                             /* increases by 32
                                                             * bits */
-        thr++;                                             /* increases by 16 
+        thr++;                                             /* increases by 16
                                                             * bit */
 
     }
@@ -873,7 +873,7 @@ ISP_RETURN ipipe_config_noise_filter(IPIPE_NOISE_FILTER_T noise_filter,
     for (i = 0; i < 8; i++)
     {
         ISP_WRITE32(*reg, *str);
-        reg++;                                             /* increases by 32 
+        reg++;                                             /* increases by 32
                                                             * bits */
         str++;                                             /* increases by 8
                                                             * bit */
@@ -891,7 +891,7 @@ ISP_RETURN ipipe_config_noise_filter(IPIPE_NOISE_FILTER_T noise_filter,
     for (i = 0; i < 8; i++)
     {
         ISP_WRITE32(*reg, *spr);
-        reg++;                                             /* increases by 32 
+        reg++;                                             /* increases by 32
                                                             * bits */
         spr++;                                             /* increases by 8
                                                             * bit */
@@ -930,24 +930,24 @@ ISP_RETURN ipipe_config_noise_filter(IPIPE_NOISE_FILTER_T noise_filter,
  */
  /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_gic_filter                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_gic_filter
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_gic_filter(ipipe_gic_cfg_t * cfg)
 {
 
@@ -993,24 +993,24 @@ ISP_RETURN ipipe_config_gic_filter(ipipe_gic_cfg_t * cfg)
 /*================================================================== */
 
 /* ===================================================================
- *  @func     ipipe_config_wbal                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_wbal
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_wbal(ipipe_wb_cfg_t * cfg)
 {
 
@@ -1062,24 +1062,24 @@ ISP_RETURN ipipe_config_wbal(ipipe_wb_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_cfa                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_cfa
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_cfa(ipipe_cfa_cfg_t * cfg)
 {
 
@@ -1121,24 +1121,24 @@ ISP_RETURN ipipe_config_cfa(ipipe_cfa_cfg_t * cfg)
  */
  /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_rgb_to_rgb                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_rgb_to_rgb
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_rgb_to_rgb(IPIPE_RGB_RGB_FILTER_NUM_T filter_num,
                                    ipipe_rgb_rgb_cfg_t * cfg)
 {
@@ -1202,24 +1202,24 @@ ISP_RETURN ipipe_config_rgb_to_rgb(IPIPE_RGB_RGB_FILTER_NUM_T filter_num,
  */
  /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_gamma                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_gamma
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_gamma(ipipe_gamma_cfg_t * cfg)
 {
 
@@ -1327,24 +1327,24 @@ ISP_RETURN ipipe_config_gamma(ipipe_gamma_cfg_t * cfg)
 /*================================================================== */
 
 /* ===================================================================
- *  @func     ipipe_config_3d_lut                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_3d_lut
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_3d_lut(ipipe_3d_lut_cfg_t * cfg)
 {
     uint32 i;
@@ -1368,7 +1368,7 @@ ISP_RETURN ipipe_config_3d_lut(ipipe_3d_lut_cfg_t * cfg)
         plut_addr = (uint32 *) lut_addr;
         for (i = 0; i < (192 * 4); i++)
         {
-            *(plut_addr + ((i % 4) * (1024 / 4)) + (i / 4)) = (uint32) (*(table_adr++));    // banks 
+            *(plut_addr + ((i % 4) * (1024 / 4)) + (i / 4)) = (uint32) (*(table_adr++));    // banks
                                                                                             // 0,1,2,3
         }
     }
@@ -1391,7 +1391,7 @@ ISP_RETURN ipipe_config_3d_lut(ipipe_3d_lut_cfg_t * cfg)
             tmpData = (((uint32) (*(table_adr++)) & 0x000003FF) << 20);
             tmpData |= (((uint32) (*(table_adr++)) & 0x000003FF) << 10);
             tmpData |= (((uint32) (*(table_adr++)) & 0x000003FF));
-            *(plut_addr + ((i % 4) * (1024 / 4)) + (i / 4)) = tmpData;  // banks 
+            *(plut_addr + ((i % 4) * (1024 / 4)) + (i / 4)) = tmpData;  // banks
                                                                         // 0,1,2,3
         }
     }
@@ -1413,24 +1413,24 @@ ISP_RETURN ipipe_config_3d_lut(ipipe_3d_lut_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_get_3dlut                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_3dlut
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 static ISP_RETURN ipipe_get_3dlut(uint32 * tbl_addr, uint8 table)
 {
     ISP_RETURN retVal = ISP_SUCCESS;
@@ -1472,24 +1472,24 @@ static ISP_RETURN ipipe_get_3dlut(uint32 * tbl_addr, uint8 table)
 /*================================================================== */
 
 /* ===================================================================
- *  @func     ipipe_config_rgb2ycbcr                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_rgb2ycbcr
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_rgb2ycbcr(ipipe_rgb_yuv_cfg_t * cfg)
 {
 
@@ -1544,24 +1544,24 @@ ISP_RETURN ipipe_config_rgb2ycbcr(ipipe_rgb_yuv_cfg_t * cfg)
  */
     /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_GBCE                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_GBCE
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_GBCE(ipipe_gbce_cfg_t * cfg)
 {
 
@@ -1626,24 +1626,24 @@ ISP_RETURN ipipe_config_GBCE(ipipe_gbce_cfg_t * cfg)
  */
     /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_edge_enhancement                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_edge_enhancement
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_edge_enhancement(ipipe_ee_cfg_t * cfg)
 {
 
@@ -1727,24 +1727,24 @@ ISP_RETURN ipipe_config_edge_enhancement(ipipe_ee_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_car                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_car
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_car(ipipe_car_cfg_t * cfg)
 {
 
@@ -1791,24 +1791,24 @@ ISP_RETURN ipipe_config_car(ipipe_car_cfg_t * cfg)
  */
     /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_chroma_supression                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_chroma_supression
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_chroma_supression(ipipe_cgs_cfg_t * cfg)
 {
 
@@ -1850,24 +1850,24 @@ ISP_RETURN ipipe_config_chroma_supression(ipipe_cgs_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_lsc                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_lsc
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_lsc(ipipe_lsc_cfg_t * cfg)
 {
 
@@ -1915,24 +1915,24 @@ ISP_RETURN ipipe_config_lsc(ipipe_lsc_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_input_src                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_input_src
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_input_src(ipipe_src_cfg_t * cfg)
 {
 
@@ -1986,24 +1986,24 @@ ISP_RETURN ipipe_config_input_src(ipipe_src_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_dimensions                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_dimensions
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_dimensions(ipipe_dims_t * cfg)
 {
 
@@ -2057,24 +2057,24 @@ ISP_RETURN ipipe_config_yuv444_to_yuv422(ipipe_yuv444_yuv422_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_boxcar                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_boxcar
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_boxcar(ipipe_boxcar_cfg_t * cfg)
 {
 
@@ -2115,24 +2115,24 @@ ISP_RETURN ipipe_config_boxcar(ipipe_boxcar_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_boxcar_addr                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_boxcar_addr
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_boxcar_addr(uint32 addr)
 {
 
@@ -2161,24 +2161,24 @@ ISP_RETURN ipipe_config_boxcar_addr(uint32 addr)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_histogram                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_histogram
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_histogram(ipipe_hist_cfg_t * cfg)
 {
 
@@ -2270,24 +2270,24 @@ ISP_RETURN ipipe_config_histogram(ipipe_hist_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_config_bsc                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_config_bsc
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_config_bsc(ipipe_bsc_cfg_t * cfg)
 {
     uint32 regval = 0;
@@ -2380,24 +2380,24 @@ ISP_RETURN ipipe_config_bsc(ipipe_bsc_cfg_t * cfg)
 /*================================================================== */
 
 /* ===================================================================
- *  @func     ipipe_get_bsc_address                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_bsc_address
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_bsc_address(uint32 * ptr, IPIPE_BSC_MEMORY_T table_select)
 {
 
@@ -2443,24 +2443,24 @@ static uint8 g2_clk_ref_cnt = 0;
 static uint8 g3_clk_ref_cnt = 0;
 
 /* ===================================================================
- *  @func     ipipe_sub_module_clk_enable                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_sub_module_clk_enable
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 static ISP_RETURN ipipe_sub_module_clk_enable(ipipe_module_clk clk_module,
                                               IPIPE_MODULE_CLK_CTRL_T enable)
 {
@@ -2582,24 +2582,24 @@ static ISP_RETURN ipipe_sub_module_clk_enable(ipipe_module_clk clk_module,
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_clk_reset                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_clk_reset
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 static ISP_RETURN ipipe_clk_reset()
 {
 
@@ -2626,7 +2626,7 @@ static ISP_RETURN ipipe_clk_reset()
     return ISP_SUCCESS;
 }
 
-/* ========================================================================== 
+/* ==========================================================================
  */
 /**
  * ipipe_get_histogram()    The function copies the computed histogram into the
@@ -2647,27 +2647,27 @@ static ISP_RETURN ipipe_clk_reset()
  *                   only the 20 LSbits are valid, others are 0). Max is 256.
  *                   Returns 0 on error
 */
-/* ========================================================================== 
+/* ==========================================================================
  */
 /* ===================================================================
- *  @func     ipipe_get_histogram                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_histogram
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 uint32 ipipe_get_histogram(uint32 * hist_buf, uint32 region_num,
                            IPIPE_HIST_COLOR_T color)
 {
@@ -2713,11 +2713,11 @@ uint32 ipipe_get_histogram(uint32 * hist_buf, uint32 region_num,
     histMemOfst = (histMemOfst << histSize) & 0x1ff;
 
     histMemAddr += (histMemOfst << 2);                     /* histMemOfst is
-                                                            * in 32 bit words 
+                                                            * in 32 bit words
                                                             * - multiplying
                                                             * it by 4 to get
                                                             * the address
-                                                            * offset in bytes 
+                                                            * offset in bytes
                                                             */
     histSize = 32 << histSize;
 
@@ -2738,24 +2738,24 @@ uint32 ipipe_get_histogram(uint32 * hist_buf, uint32 region_num,
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_get_config_DPC_lut                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_DPC_lut
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_DPC_lut(ipipe_dpc_lut_cfg_t * cfg)
 {
     ISP_ASSERT(cfg, NULL);
@@ -2795,24 +2795,24 @@ ISP_RETURN ipipe_get_config_DPC_lut(ipipe_dpc_lut_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_get_config_DPC_otf                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_DPC_otf
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_DPC_otf(ipipe_dpc_otf_cfg_t * cfg)
 {
 
@@ -2866,12 +2866,12 @@ ISP_RETURN ipipe_get_config_DPC_otf(ipipe_dpc_otf_cfg_t * cfg)
          * ISP_SET32(IPIPE_DPC_OTF_3_D_SPL,cfg->dpc_data.dpc3_params.otf3d.d_slp,CSL_IPIPE_DPC_OTF_3_D_SPL_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_D_SPL_VAL_MASK);
          * ISP_SET32(IPIPE_DPC_OTF_3_D_MAX,cfg->dpc_data.dpc3_params.otf3d.d_max,CSL_IPIPE_DPC_OTF_3_D_MAX_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_D_MAX_VAL_MASK);
          * ISP_SET32(IPIPE_DPC_OTF_3_D_MIN,cfg->dpc_data.dpc3_params.otf3d.d_min,CSL_IPIPE_DPC_OTF_3_D_MIN_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_D_MAX_VAL_MASK);
-         * 
+         *
          * ISP_SET32(IPIPE_DPC_OTF_3_C_THR,cfg->dpc_data.dpc3_params.otf3d.thr,CSL_IPIPE_DPC_OTF_3_C_THR_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_C_THR_VAL_MASK);
          * ISP_SET32(IPIPE_DPC_OTF_3_C_SLP,cfg->dpc_data.dpc3_params.otf3d.d_slp,CSL_IPIPE_DPC_OTF_3_C_SPL_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_C_SPL_VAL_MASK);
          * ISP_SET32(IPIPE_DPC_OTF_3_C_MAX,cfg->dpc_data.dpc3_params.otf3d.d_max,CSL_IPIPE_DPC_OTF_3_C_MAX_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_C_MAX_VAL_MASK);
          * ISP_SET32(IPIPE_DPC_OTF_3_C_MIN,cfg->dpc_data.dpc3_params.otf3d.d_min,CSL_IPIPE_DPC_OTF_3_C_MIN_VAL_SHIFT,CSL_IPIPE_DPC_OTF_3_C_MAX_VAL_MASK);
-         * 
+         *
          */
     }
 
@@ -2892,24 +2892,24 @@ ISP_RETURN ipipe_get_config_DPC_otf(ipipe_dpc_otf_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_get_config_noise_filter                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_noise_filter
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_noise_filter(IPIPE_NOISE_FILTER_T noise_filter,
                                          ipipe_noise_filter_cfg_t * cfg)
 {
@@ -2943,7 +2943,7 @@ ISP_RETURN ipipe_get_config_noise_filter(IPIPE_NOISE_FILTER_T noise_filter,
     // pipe_sub_module_clk_enable(module_clk,IPIPE_MODULE_CLK_ENABLE );
     /* Clk for both NF1 and NF2 is same */
 
-    /* ipipe_sub_module_clk_enable(IPIPE_NOISE_FILTER_1_CLK,IPIPE_MODULE_CLK_ENABLE 
+    /* ipipe_sub_module_clk_enable(IPIPE_NOISE_FILTER_1_CLK,IPIPE_MODULE_CLK_ENABLE
      * ); */
 
     ISP_WRITE32(cfg->enable, *reg);
@@ -2976,10 +2976,10 @@ ISP_RETURN ipipe_get_config_noise_filter(IPIPE_NOISE_FILTER_T noise_filter,
     /* ################################################################ Is
      * this required in the get_config also??
      * ---------------------------------
-     * 
+     *
      * ISP_WRITE32(*(reg+1),typ_reg_val);
-     * 
-     * 
+     *
+     *
      * ################################################################### */
 
     /* Set filter thresholds */
@@ -3010,7 +3010,7 @@ ISP_RETURN ipipe_get_config_noise_filter(IPIPE_NOISE_FILTER_T noise_filter,
     for (i = 0; i < 8; i++)
     {
         ISP_WRITE8(*str, *reg);
-        reg++;                                             /* increases by 32 
+        reg++;                                             /* increases by 32
                                                             * bits */
         str++;                                             /* increases by 8
                                                             * bit */
@@ -3027,7 +3027,7 @@ ISP_RETURN ipipe_get_config_noise_filter(IPIPE_NOISE_FILTER_T noise_filter,
     for (i = 0; i < 8; i++)
     {
         ISP_WRITE8(*spr, *reg);
-        reg++;                                             /* increases by 32 
+        reg++;                                             /* increases by 32
                                                             * bits */
         spr++;                                             /* increases by 8
                                                             * bit */
@@ -3067,24 +3067,24 @@ ISP_RETURN ipipe_get_config_noise_filter(IPIPE_NOISE_FILTER_T noise_filter,
 /*================================================================== */
 
 /* ===================================================================
- *  @func     ipipe_get_config_gic_filter                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_gic_filter
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_gic_filter(ipipe_gic_cfg_t * cfg)
 {
 
@@ -3102,15 +3102,15 @@ ISP_RETURN ipipe_get_config_gic_filter(ipipe_gic_cfg_t * cfg)
     cfg->lsc_gain =
         (IPIPE_GIC_LSC_GAIN_T) ISP_FEXT(val, CSL_IPIPE_GIC_TYP_LSC_SHIFT,
                                         CSL_IPIPE_GIC_TYP_LSC_MASK);
-    cfg->sel = (IPIPE_GIC_SEL_T) ISP_FEXT(val, CSL_IPIPE_GIC_TYP_SEL_SHIFT, CSL_IPIPE_GIC_TYP_SEL_MASK);    /* Here, 
-                                                                                                             * code 
-                                                                                                             * had 
-                                                                                                             * 2 
-                                                                                                             * shift 
-                                                                                                             * inputs, 
-                                                                                                             * so 
-                                                                                                             * changed 
-                                                                                                             * to 
+    cfg->sel = (IPIPE_GIC_SEL_T) ISP_FEXT(val, CSL_IPIPE_GIC_TYP_SEL_SHIFT, CSL_IPIPE_GIC_TYP_SEL_MASK);    /* Here,
+                                                                                                             * code
+                                                                                                             * had
+                                                                                                             * 2
+                                                                                                             * shift
+                                                                                                             * inputs,
+                                                                                                             * so
+                                                                                                             * changed
+                                                                                                             * to
                                                                                                              * shift+mask */
 
     ISP_WRITE32(cfg->gic_gain, ipipe_reg->GIC_GAN);
@@ -3134,24 +3134,24 @@ ISP_RETURN ipipe_get_config_gic_filter(ipipe_gic_cfg_t * cfg)
 /*================================================================== */
 
 /* ===================================================================
- *  @func     ipipe_get_config_wbal                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_wbal
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_wbal(ipipe_wb_cfg_t * cfg)
 {
 
@@ -3209,24 +3209,24 @@ ISP_RETURN ipipe_get_config_wbal(ipipe_wb_cfg_t * cfg)
 /*================================================================== */
 
 /* ===================================================================
- *  @func     ipipe_get_config_cfa                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_cfa
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_cfa(ipipe_cfa_cfg_t * cfg)
 {
 
@@ -3268,24 +3268,24 @@ ISP_RETURN ipipe_get_config_cfa(ipipe_cfa_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_get_config_rgb_to_rgb                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_rgb_to_rgb
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_rgb_to_rgb(IPIPE_RGB_RGB_FILTER_NUM_T filter_num,
                                        ipipe_rgb_rgb_cfg_t * cfg)
 {
@@ -3337,24 +3337,24 @@ ISP_RETURN ipipe_get_config_rgb_to_rgb(IPIPE_RGB_RGB_FILTER_NUM_T filter_num,
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_get_config_gamma                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_gamma
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_gamma(ipipe_gamma_cfg_t * cfg)
 {
 
@@ -3399,24 +3399,24 @@ ISP_RETURN ipipe_get_config_gamma(ipipe_gamma_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_get_config_3d_lut                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_3d_lut
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_3d_lut(ipipe_3d_lut_cfg_t * cfg)
 {
 
@@ -3441,24 +3441,24 @@ ISP_RETURN ipipe_get_config_3d_lut(ipipe_3d_lut_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_get_config_rgb2ycbcr                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_rgb2ycbcr
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_rgb2ycbcr(ipipe_rgb_yuv_cfg_t * cfg)
 {
 
@@ -3510,24 +3510,24 @@ ISP_RETURN ipipe_get_config_rgb2ycbcr(ipipe_rgb_yuv_cfg_t * cfg)
 /*================================================================== */
 
 /* ===================================================================
- *  @func     ipipe_get_config_GBCE                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_GBCE
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_GBCE(ipipe_gbce_cfg_t * cfg)
 {
 
@@ -3558,24 +3558,24 @@ ISP_RETURN ipipe_get_config_GBCE(ipipe_gbce_cfg_t * cfg)
 /*================================================================== */
 
 /* ===================================================================
- *  @func     ipipe_get_config_edge_enhancement                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_edge_enhancement
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_edge_enhancement(ipipe_ee_cfg_t * cfg)
 {
 
@@ -3645,24 +3645,24 @@ ISP_RETURN ipipe_get_config_edge_enhancement(ipipe_ee_cfg_t * cfg)
 /*================================================================== */
 
 /* ===================================================================
- *  @func     ipipe_get_config_car                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_car
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_car(ipipe_car_cfg_t * cfg)
 {
 
@@ -3707,24 +3707,24 @@ ISP_RETURN ipipe_get_config_car(ipipe_car_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_get_config_chroma_supression                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_chroma_supression
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_chroma_supression(ipipe_cgs_cfg_t * cfg)
 {
 
@@ -3764,24 +3764,24 @@ ISP_RETURN ipipe_get_config_chroma_supression(ipipe_cgs_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_get_config_input_src                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_get_config_input_src
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 ISP_RETURN ipipe_get_config_input_src(ipipe_src_cfg_t * cfg)
 {
     // uint32 val=0;
@@ -3872,37 +3872,63 @@ ISP_RETURN ipipe_get_config_yuv444_to_yuv422(ipipe_yuv444_yuv422_cfg_t * cfg)
  */
 /*================================================================== */
 /* ===================================================================
- *  @func     ipipe_reg_update_callback                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ipipe_reg_update_callback
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 void ipipe_reg_update_callback(ISP_RETURN status, uint32 arg1, void *arg2)
 {
 
     return;
 }
 
-/* 
- * 
+/*
+ *
  * CSL_Status CSL_ipipeSetCntBrtConfig(CSL_IpipeHandle hndl,
  * CSL_IpipeCntBrtConfig * data) { if (hndl == NULL || data == NULL) return
  * CSL_EFAIL;
- * 
+ *
  * CSL_FINS(hndl->regs->YUV_ADJ, IPIPE_YUV_ADJ_BRT, data->brightness);
  * CSL_FINS(hndl->regs->YUV_ADJ, IPIPE_YUV_ADJ_CTR, data->contrast);
- * 
+ *
  * return CSL_SOK; } */
+
+ /* add by Jerry 2016.6.12 */
+int DEV2A_capt2AUpdate(DRV_IpipeWb *In2Adata)
+{
+	int status = 0;
+	unsigned int rGain;
+	unsigned int grGain;
+	unsigned int gbGain;
+	unsigned int bGain;
+
+	rGain=In2Adata->rGain;
+	grGain=In2Adata->grGain;
+	gbGain=In2Adata->gbGain;
+	bGain=In2Adata->bGain;
+
+	ipipe_reg->WB2_OFT_R = 0;
+	ipipe_reg->WB2_OFT_GR = 0;
+	ipipe_reg->WB2_OFT_GB = 0;
+	ipipe_reg->WB2_OFT_B = 0;
+	ipipe_reg->WB2_WGN_R =rGain;
+	ipipe_reg->WB2_WGN_GR =grGain;
+	ipipe_reg->WB2_WGN_GB = gbGain;
+	ipipe_reg->WB2_WGN_B =bGain;
+	return status;
+}
+

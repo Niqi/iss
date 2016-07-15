@@ -1,9 +1,9 @@
-/* ============================================================================ 
+/* ============================================================================
  * Texas Instruments OMAP(TM) Platform Software (c) Copyright 2009, Texas
  * Instruments Incorporated.  All Rights Reserved.  Use of this software is
  * controlled by the terms and conditions found in the license agreement
  * under which this software has been supplied.
- * ========================================================================== 
+ * ==========================================================================
  */
 /**
  * @file    isp_msp.c
@@ -15,9 +15,9 @@
  *
  * @rev     2.0
 */
-/* -------------------------------------------------------------------------- 
+/* --------------------------------------------------------------------------
  */
-/* 
+/*
  *! Revision History
  *! ===================================
  *! 30-Jun-2009  Author: Pavel Nedev - All MSP functions revised and modified.
@@ -110,48 +110,48 @@ MSP_U32 WaitQueueIdxElems;
 // ====================== Local Routines
 // ======================================
 /* ===================================================================
- *  @func     ispLock                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ispLock
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 static inline void ispLock(void)
 {
     HwiState = Hwi_disable();
 }
 
 /* ===================================================================
- *  @func     ispUnlock                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     ispUnlock
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 static inline void ispUnlock(void)
 {
     Hwi_restore(HwiState);
@@ -161,45 +161,45 @@ static inline void ispUnlock(void)
  * FUNCTIONS
  ******************************************************************************/
 /* ===================================================================
- *  @func     isp_test_isif_linenum_handle                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     isp_test_isif_linenum_handle
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 void isp_test_isif_linenum_handle(ISP_RETURN status, uint32 arg1, void *arg2);
 
 /* ===================================================================
- *  @func     MSP_IspIsrCallback                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     MSP_IspIsrCallback
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 void MSP_IspIsrCallback(ISS_RETURN status, uint32 arg1, void *arg2)
 {
     MSP_COMPONENT_TYPE *hMSP;
@@ -212,24 +212,24 @@ void MSP_IspIsrCallback(ISS_RETURN status, uint32 arg1, void *arg2)
 };
 
 /* ===================================================================
- *  @func     MSP_IssIsrCallback                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     MSP_IssIsrCallback
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 void MSP_IssIsrCallback(ISS_RETURN status, uint32 arg1, void *arg2)
 {
     MSP_COMPONENT_TYPE *hMSP;
@@ -243,34 +243,34 @@ void MSP_IssIsrCallback(ISS_RETURN status, uint32 arg1, void *arg2)
                                    MSP_DATA_EVENT, arg1, 0);
 };
 
-/* ========================================================================== 
+/* ==========================================================================
  */
 /**
  * @fn  MSP_ISP_open()    MSP ISP device driver open function.
  *
  * @see  isp_msp.h
 */
-/* ========================================================================== 
+/* ==========================================================================
  */
 /* ===================================================================
- *  @func     MSP_ISP_open                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     MSP_ISP_open
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 MSP_ERROR_TYPE MSP_ISP_open(MSP_HANDLE handle, MSP_PTR pCreateParam)
 {
     MSP_ERROR_TYPE eResult = MSP_ERROR_NONE;
@@ -278,7 +278,7 @@ MSP_ERROR_TYPE MSP_ISP_open(MSP_HANDLE handle, MSP_PTR pCreateParam)
     return (eResult);
 }
 
-/* ========================================================================== 
+/* ==========================================================================
  */
 /**
  * @fn  MSP_ISP_control()    MSP ISP device driver control function.
@@ -286,27 +286,27 @@ MSP_ERROR_TYPE MSP_ISP_open(MSP_HANDLE handle, MSP_PTR pCreateParam)
  *
  * @see  isp_msp.h
 */
-/* ========================================================================== 
+/* ==========================================================================
  */
 /* ===================================================================
- *  @func     MSP_ISP_control                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     MSP_ISP_control
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 MSP_ERROR_TYPE MSP_ISP_control(MSP_HANDLE handle, MSP_CTRLCMD_TYPE tCmd,
                                MSP_PTR pCmdParam)
 {
@@ -412,7 +412,7 @@ MSP_ERROR_TYPE MSP_ISP_control(MSP_HANDLE handle, MSP_CTRLCMD_TYPE tCmd,
     return (eResult);
 }
 
-/* ========================================================================== 
+/* ==========================================================================
  */
 /**
  * @fn  MSP_ISP_process()    MSP ISP device driver process function.
@@ -420,27 +420,27 @@ MSP_ERROR_TYPE MSP_ISP_control(MSP_HANDLE handle, MSP_CTRLCMD_TYPE tCmd,
  *
  * @see  isp_msp.h
 */
-/* ========================================================================== 
+/* ==========================================================================
  */
 /* ===================================================================
- *  @func     MSP_ISP_process                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     MSP_ISP_process
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 MSP_ERROR_TYPE MSP_ISP_process(MSP_HANDLE handle, MSP_PTR pArg,
                                MSP_BUFHEADER_TYPE * ptBufHdr)
 {
@@ -605,7 +605,7 @@ MSP_ERROR_TYPE MSP_ISP_process(MSP_HANDLE handle, MSP_PTR pArg,
 /* Hack for DCC Integration */
 iss_drv_config_t *iss_drv_config;
 
-/* ========================================================================== 
+/* ==========================================================================
  */
 /**
  * @fn  MSP_ISP_config()    MSP ISP device driver config function.
@@ -613,27 +613,27 @@ iss_drv_config_t *iss_drv_config;
  *
  * @see  isp_msp.h
 */
-/* ========================================================================== 
+/* ==========================================================================
  */
 /* ===================================================================
- *  @func     MSP_ISP_config                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     MSP_ISP_config
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 MSP_ERROR_TYPE MSP_ISP_config(MSP_HANDLE handle, MSP_INDEXTYPE tConfigIndex,
                               MSP_PTR pConfigParam)
 {
@@ -973,26 +973,30 @@ MSP_ERROR_TYPE MSP_ISP_config(MSP_HANDLE handle, MSP_INDEXTYPE tConfigIndex,
 
             isp_regs->ISP5_CTRL |= (1 << 22);              // 22
 #ifdef IMGS_PANASONIC_MN34041
-            isp_regs->ISP5_CTRL &= ~(1 << 22); 
+            isp_regs->ISP5_CTRL &= ~(1 << 22);
 #endif
 #ifdef IMGS_SONY_IMX136
-            isp_regs->ISP5_CTRL &= ~(1 << 22); 
+            isp_regs->ISP5_CTRL &= ~(1 << 22);
 #endif
 #ifdef IMGS_SONY_IMX140
-            isp_regs->ISP5_CTRL &= ~(1 << 22); 
+            isp_regs->ISP5_CTRL &= ~(1 << 22);
 #endif
+#ifdef IMGS_SONY_IMX291
+            isp_regs->ISP5_CTRL &= ~(1 << 22);
+#endif
+
 #ifdef IMGS_MICRON_AR0331
-            //isp_regs->ISP5_CTRL &= ~(1 << 22); 
-#endif	
+            //isp_regs->ISP5_CTRL &= ~(1 << 22);
+#endif
 #ifdef IMGS_OMNIVISION_OV2715
-            isp_regs->ISP5_CTRL &= ~(1 << 22); 
-#endif	
+            isp_regs->ISP5_CTRL &= ~(1 << 22);
+#endif
 #ifdef IMGS_MICRON_MT9M034
-            isp_regs->ISP5_CTRL &= ~(1 << 22); 
-#endif	
+            isp_regs->ISP5_CTRL &= ~(1 << 22);
+#endif
 #ifdef  IMGS_MICRON_MT9M034_DUAL_HEAD_BOARD
-            isp_regs->ISP5_CTRL &= ~(1 << 22); 
-#endif		
+            isp_regs->ISP5_CTRL &= ~(1 << 22);
+#endif
             rsz_reg->SRC_HPS = 0;
 
         }
@@ -1056,7 +1060,7 @@ MSP_ERROR_TYPE MSP_ISP_config(MSP_HANDLE handle, MSP_INDEXTYPE tConfigIndex,
 
 }
 
-/* ========================================================================== 
+/* ==========================================================================
  */
 /**
  * @fn  MSP_ISP_query()    MSP ISP device driver query function.
@@ -1064,27 +1068,27 @@ MSP_ERROR_TYPE MSP_ISP_config(MSP_HANDLE handle, MSP_INDEXTYPE tConfigIndex,
  *
  * @see  isp_msp.h
 */
-/* ========================================================================== 
+/* ==========================================================================
  */
 /* ===================================================================
- *  @func     MSP_ISP_query                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     MSP_ISP_query
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 MSP_ERROR_TYPE MSP_ISP_query(MSP_HANDLE handle, MSP_INDEXTYPE tQueryIndex,
                              MSP_PTR pQueryParam)
 {
@@ -1203,7 +1207,7 @@ MSP_ERROR_TYPE MSP_ISP_query(MSP_HANDLE handle, MSP_INDEXTYPE tQueryIndex,
     return (eResult);
 }
 
-/* ========================================================================== 
+/* ==========================================================================
  */
 /**
  * @fn  MSP_ISP_close()    MSP ISP device driver close function.
@@ -1211,27 +1215,27 @@ MSP_ERROR_TYPE MSP_ISP_query(MSP_HANDLE handle, MSP_INDEXTYPE tQueryIndex,
  *
  * @see  isp_msp.h
 */
-/* ========================================================================== 
+/* ==========================================================================
  */
 /* ===================================================================
- *  @func     MSP_ISP_close                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     MSP_ISP_close
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 MSP_ERROR_TYPE MSP_ISP_close(MSP_HANDLE handle)
 {
     MSP_ERROR_TYPE eResult = MSP_ERROR_NONE;
@@ -1239,7 +1243,7 @@ MSP_ERROR_TYPE MSP_ISP_close(MSP_HANDLE handle)
     return (eResult);
 }
 
-/* ========================================================================== 
+/* ==========================================================================
  */
 /**
  * @fn  MSP_ISP_deInit()    MSP ISP device driver deinit function.
@@ -1247,27 +1251,27 @@ MSP_ERROR_TYPE MSP_ISP_close(MSP_HANDLE handle)
  *
  * @see  isp_msp.h
 */
-/* ========================================================================== 
+/* ==========================================================================
  */
 /* ===================================================================
- *  @func     MSP_ISP_deInit                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     MSP_ISP_deInit
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 MSP_ERROR_TYPE MSP_ISP_deInit(MSP_HANDLE handle)
 {
     MSP_ERROR_TYPE eResult = MSP_ERROR_NONE;
@@ -1282,9 +1286,9 @@ MSP_ERROR_TYPE MSP_ISP_deInit(MSP_HANDLE handle)
     tIspDev = (ispDriverInstanceT *) hMSP->pCompPrivate;
 
     free(tIspDev);
-	
+
 	hMSP->pCompPrivate = NULL;
-	
+
     //Invocations--;
     if (!Invocations)
     {
@@ -1304,7 +1308,7 @@ MSP_ERROR_TYPE MSP_ISP_deInit(MSP_HANDLE handle)
     /* EXIT_3: eResult = MSP_ERROR_HARDWARE; return (eResult); */
 }
 
-/* ========================================================================== 
+/* ==========================================================================
  */
 /**
  * @fn  MSP_ISP_init()    MSP ISP device driver initlization function. Allocates
@@ -1313,27 +1317,27 @@ MSP_ERROR_TYPE MSP_ISP_deInit(MSP_HANDLE handle)
  *
  * @see  isp_msp.h
 */
-/* ========================================================================== 
+/* ==========================================================================
  */
 /* ===================================================================
- *  @func     MSP_ISP_init                                               
- *                                                                    
- *  @desc     Function does the following                             
- *                                                                    
- *  @modif    This function modifies the following structures         
- *                                                                    
- *  @inputs   This function takes the following inputs                
- *            <argument name>                                         
- *            Description of usage                                    
- *            <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @outputs  <argument name>                                         
- *            Description of usage                                    
- *                                                                    
- *  @return   Return value of this function if any                    
+ *  @func     MSP_ISP_init
+ *
+ *  @desc     Function does the following
+ *
+ *  @modif    This function modifies the following structures
+ *
+ *  @inputs   This function takes the following inputs
+ *            <argument name>
+ *            Description of usage
+ *            <argument name>
+ *            Description of usage
+ *
+ *  @outputs  <argument name>
+ *            Description of usage
+ *
+ *  @return   Return value of this function if any
  *  ==================================================================
- */                                                                   
+ */
 MSP_ERROR_TYPE MSP_ISP_init(MSP_COMPONENT_TYPE * hMSP,
                             MSP_PROFILE_TYPE tProfile)
 {
@@ -1369,27 +1373,27 @@ MSP_ERROR_TYPE MSP_ISP_init(MSP_COMPONENT_TYPE * hMSP,
     hMSP->deInit = MSP_ISP_deInit;
 
     if (!Invocations)
-    {                                                      /* 
+    {                                                      /*
                                                             * // Enable ISP
                                                             * clock and
                                                             * initialize ISP
-                                                            * GOTO_EXIT_IF(ISS_SUCCESS 
+                                                            * GOTO_EXIT_IF(ISS_SUCCESS
                                                             * != iss_init(),
                                                             * 4);
-                                                            * GOTO_EXIT_IF(ISP_SUCCESS 
+                                                            * GOTO_EXIT_IF(ISP_SUCCESS
                                                             * !=
-                                                            * isp_common_init(), 
+                                                            * isp_common_init(),
                                                             * 4);
-                                                            * 
-                                                            * iss_module_clk_ctrl(ISS_SIMCOP_CLK, 
+                                                            *
+                                                            * iss_module_clk_ctrl(ISS_SIMCOP_CLK,
                                                             * ISS_CLK_ENABLE);
-                                                            * iss_module_clk_ctrl(ISS_ISP_CLK, 
+                                                            * iss_module_clk_ctrl(ISS_ISP_CLK,
                                                             * ISS_CLK_ENABLE);
-                                                            * iss_module_clk_ctrl(ISS_CCP2_CLK, 
+                                                            * iss_module_clk_ctrl(ISS_CCP2_CLK,
                                                             * ISS_CLK_ENABLE);
-                                                            * iss_module_clk_ctrl(ISS_CSI2B_CLK, 
+                                                            * iss_module_clk_ctrl(ISS_CSI2B_CLK,
                                                             * ISS_CLK_ENABLE);
-                                                            * iss_module_clk_ctrl(ISS_CSI2A_CLK, 
+                                                            * iss_module_clk_ctrl(ISS_CSI2A_CLK,
                                                             * ISS_CLK_ENABLE); */
         // TODO: RECOVER ME GOTO_EXIT_IF(ISP_SUCCESS != issDrvInit(), 4);
 

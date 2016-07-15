@@ -81,6 +81,9 @@
 #ifdef IMGS_SONY_IMX140
 #include "ti/psp/devices/imx140/issdrv_imx140.h"
 #endif
+#ifdef IMGS_SONY_IMX291
+#include "ti/psp/devices/imx291/issdrv_imx291.h"
+#endif
 
 #ifdef CBB_PLATFORM
 #define REG32	*(volatile unsigned int*)
@@ -222,6 +225,9 @@ Int32 Iss_deviceInit(Vps_DeviceInitParams * pPrm)
 #ifdef IMGS_SONY_IMX140
             Iss_Imx140PinMux();
 #endif
+#ifdef IMGS_SONY_IMX291
+            Iss_Imx291PinMux();
+#endif
 #ifdef IMGS_SONY_IMX122
             Iss_Imx122PinMux();
 #endif
@@ -294,6 +300,9 @@ Int32 Iss_deviceInit(Vps_DeviceInitParams * pPrm)
 #endif
 #ifdef IMGS_SONY_IMX140
                 status |= Iss_Imx140Init();
+#endif
+#ifdef IMGS_SONY_IMX291
+                status |= Iss_Imx291Init();
 #endif
 #ifdef IMGS_SONY_IMX122
                 status |= Iss_Imx122Init();
@@ -404,6 +413,9 @@ Int32 Iss_deviceDeInit()
 #endif
 #ifdef IMGS_SONY_IMX140
         status |= Iss_Imx140DeInit();
+#endif
+#ifdef IMGS_SONY_IMX291
+        status |= Iss_Imx291DeInit();
 #endif
 #ifdef IMGS_SONY_IMX122
         status |= Iss_Imx122DeInit();

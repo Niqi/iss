@@ -63,7 +63,9 @@ endif
 ifeq ($(IMGS_ID),IMGS_SONY_IMX122)
 	SRCDIR = src imx122/src
 endif
-
+ifeq ($(IMGS_ID),IMGS_SONY_IMX291)
+	SRCDIR = src imx291/src
+endif
 INCDIR = . $(hdvpss_PATH)/packages 
 
 DEFINE+=-D$(IMGS_ID)
@@ -143,7 +145,9 @@ endif
 ifeq ($(IMGS_ID),IMGS_SONY_IMX122)
 	include $(MODULE_SRC_BASE_PATH)/imx122/SRC_FILES.MK
 endif
-
+ifeq ($(IMGS_ID),IMGS_SONY_IMX291)
+	include $(MODULE_SRC_BASE_PATH)/imx291/SRC_FILES.MK
+endif
 # Core/SoC/platform specific source files and CFLAGS
 # Example:
 #   SRCS_<core/SoC/platform-name> =

@@ -214,7 +214,7 @@ static Int32 configureBteContext(bteHandle *handleBTE, int streamNumber, int wid
 	contextHandle = &handleBTE->bte_config[i];
 
 	/* First context */
-	if(isYUV422ILEFormat(format) == 1)	
+	if(isYUV422ILEFormat(format) == 1)
 	{
 		pitch = width * 2;
 	}
@@ -427,26 +427,26 @@ Int32 bufSwitchFull(UInt32 streamId)
 					pitchC = pObj->createArgs.outStreamInfo[streamId].pitch[1];
 					width = pObj->createArgs.rszPrms.rPrms[streamId].outWidth;
 					height = pObj->createArgs.rszPrms.rPrms[streamId].outHeight;
-					
+
                     if(isYUV422ILEFormat(pObj->createArgs.outStreamInfo[streamId].dataFormat) == 1)
                     {
-						bufAddr = (char *)pframeSave->addr[1][0] + pitchY * startY + startX * 2;		
+						bufAddr = (char *)pframeSave->addr[1][0] + pitchY * startY + startX * 2;
 						for (i = 0; i < height; i++)
 							memcpy((char *)gIss_captCommonObj.YUVcaptureAddr + width * 2 * i,
 								bufAddr + pitchY * i, width * 2);
                     }
 					else
 					{
-						bufAddr = (char *)pframeSave->addr[1][0] + pitchY * startY + startX;		
+						bufAddr = (char *)pframeSave->addr[1][0] + pitchY * startY + startX;
 						for (i = 0; i < height; i++)
 							memcpy((char *)gIss_captCommonObj.YUVcaptureAddr + width * i,
 								bufAddr + pitchY * i, width);
-						bufAddr = (char *)pframeSave->addr[1][1] + pitchC * startY/2 + startX;	
+						bufAddr = (char *)pframeSave->addr[1][1] + pitchC * startY/2 + startX;
 						for (i = 0; i < height/2; i++)
 							memcpy((char *)gIss_captCommonObj.YUVcaptureAddr + width * height + width * i,
 								bufAddr + pitchC * i, width);
 					}
-					
+
 					gIss_captCommonObj.gIttParams->Raw_Data_Ready = 1;
                     gYUVCaptureTriggerd = 0;
                     trigger_wait_cnt = 0;
@@ -654,8 +654,8 @@ void calc_flip_offsets(Int16 dataFormat, Int16 streamId, Int32 pitch, Int32 heig
 	{
 	    if (dataFormat == 0)/*YUV422*/
 	    {
-	        curStreamBuf[streamId].flipVOffsetY = (pitch * 2 * (height - 1)) / 4;	
-	        curStreamBuf[streamId].flipVOffsetC = (pitch * (height / 2 - 1)) / 4;	
+	        curStreamBuf[streamId].flipVOffsetY = (pitch * 2 * (height - 1)) / 4;
+	        curStreamBuf[streamId].flipVOffsetC = (pitch * (height / 2 - 1)) / 4;
 	        curStreamBuf[streamId].flipHOffsetYC = (width * 2 - 1) / 4;
 	    }
 	    else if (dataFormat == 1) /*420SP*/
@@ -1896,8 +1896,8 @@ Int32 Iss_captDelete(Fdrv_Handle handle, Ptr reserved)
         IssAlg_capt2ADeInit(
             (Iss_2AObj*)gIss_captCommonObj.pModuleInstance->p2AObj);
 
-		pObj->dbgLineNo = __LINE__;	
-			
+		pObj->dbgLineNo = __LINE__;
+
         free(gIss_captCommonObj.pModuleInstance->p2AObj);
 
         /* stop Isp processing */
@@ -1907,16 +1907,16 @@ Int32 Iss_captDelete(Fdrv_Handle handle, Ptr reserved)
             NULL);
 
 		pObj->dbgLineNo = __LINE__;
-			
+
         /* Soft resetting ISS */
         ipipe_config_boxcar_addr(NULL);
-		
+
 		pObj->dbgLineNo = __LINE__;
-		
+
         Iss_ispWriteReg(&iss_regs->ISS_HL_SYSCONFIG,1,0,1);
-		
+
 		pObj->dbgLineNo = __LINE__;
-				
+
         /* delete semaphores */
         Semaphore_delete(&pObj->semStopDone);
         Semaphore_delete(&pObj->semStartDone);
@@ -1937,7 +1937,7 @@ Int32 Iss_captDelete(Fdrv_Handle handle, Ptr reserved)
             deInit((MSP_HANDLE)gIss_captCommonObj.pModuleInstance->hIspHandle);
 
 		pObj->dbgLineNo = __LINE__;
-			
+
         /*
          * free buffer allocations
          */
@@ -1960,7 +1960,7 @@ Int32 Iss_captDelete(Fdrv_Handle handle, Ptr reserved)
     IssAlg_captDeInit();
 
 	pObj->dbgLineNo = __LINE__;
-	
+
     return status;
 }
 
@@ -2507,7 +2507,10 @@ Int32 Iss_captControl(Fdrv_Handle handle, UInt32 cmd,
         case IOCTL_ISS_CAPT_SET_H3A_CFG:
         {
             Iss_IspH3aCfg *h3aCfg = (Iss_IspH3aCfg *)cmdArgs;
-
+		#ifdef USE_2A_VER_DEV
+			h3aCfg->aewbCfg.satMax 	 = 0x3F2;
+       		h3aCfg->aewbCfg.sumShift = 4;
+		#endif
             if ((pObj->inFmt.dataFormat == FVID2_DF_BAYER_RAW) ||
                 (pObj->inFmt.dataFormat == FVID2_DF_RAW))
             {
@@ -2582,7 +2585,7 @@ Int32 Iss_captControl(Fdrv_Handle handle, UInt32 cmd,
 			status = Iss_captSetOutDataFmt(handle, pOutDataFmt);
 			break;
 		}
-		
+
         default:
 
             /*
@@ -2829,14 +2832,14 @@ Int32 Iss_captStart(Fdrv_Handle handle)
             }
         }
     }
-	
+
 #ifdef USE_MIPI_MODE
 	isif_reg->CGAMMAWD = 0x7708;
 	iss_regs->ISS_CTRL &= ~0x0000000C;
 	csi2A_regs->CSI2_CTRL |= 0x00000800;
 	isp_regs ->ISP5_CTRL |= 0x00C00000;
 #endif
-	
+
 #if defined(IMGS_OMNIVISION_OV10630) || defined(IMGS_OMNIVISION_OV2710)
     isif_reg->SYNCEN = 0x3;
 #endif
@@ -4096,16 +4099,16 @@ Int32 Iss_captSetResolution(Iss_CaptObj * pObj,
 		if(isYUV422ILEFormat(pObj->createArgs.outStreamInfo[resolutionParams->channelNum].dataFormat) == 1)
 		{
 			pObj->createArgs.pitch[resolutionParams->channelNum] = resolutionParams->ResolutionPitch[0]/2;
-		}	
+		}
 		else
 		{
 			pObj->createArgs.pitch[resolutionParams->channelNum] = resolutionParams->ResolutionPitch[0];
 		}
-		
+
 		pObj->createArgs.outStreamInfo[resolutionParams->channelNum].pitch[0] = resolutionParams->ResolutionPitch[0];
 		pObj->createArgs.outStreamInfo[resolutionParams->channelNum].pitch[1] = resolutionParams->ResolutionPitch[1];
 	}
-	
+
     Issdrv_captSetRszCfg(pObj, &pObj->createArgs.rszPrms);
 
     /* unlock driver instance */
@@ -4243,43 +4246,43 @@ Int32 Iss_captSetOutDataFmt(Iss_CaptObj *pObj,Iss_CaptOutDataFormat *pOutDataFmt
     {
         return FVID2_EFAIL;
     }
-	
+
 	streamId = pOutDataFmt->streamId;
-	
+
 	/* Check if data format change is required */
-	if(((isYUV422ILEFormat(pOutDataFmt->dataFmt) == 1) && (isYUV422ILEFormat(pObj->createArgs.outStreamInfo[streamId].dataFormat) == 1)) || 
+	if(((isYUV422ILEFormat(pOutDataFmt->dataFmt) == 1) && (isYUV422ILEFormat(pObj->createArgs.outStreamInfo[streamId].dataFormat) == 1)) ||
 	   ((isYUV420SPFormat(pOutDataFmt->dataFmt) == 1) && (isYUV420SPFormat(pObj->createArgs.outStreamInfo[streamId].dataFormat) == 1)))
 	{
 		return FVID2_SOK;
 	}
-	
+
     /* lock driver instance */
     Iss_captLock(pObj);
-		
+
 	pObj->createArgs.outStreamInfo[streamId].dataFormat = pOutDataFmt->dataFmt;
-	
+
 	if(isYUV422ILEFormat(pObj->createArgs.outStreamInfo[streamId].dataFormat) == 1)
 	{
 		pObj->createArgs.outStreamInfo[streamId].pitch[0] *= 2;
-		pObj->createArgs.outStreamInfo[streamId].pitch[1] *= 2; 
+		pObj->createArgs.outStreamInfo[streamId].pitch[1] *= 2;
 	}
 	else
 	{
 		pObj->createArgs.outStreamInfo[streamId].pitch[0] /= 2;
-		pObj->createArgs.outStreamInfo[streamId].pitch[1] /= 2; 	
+		pObj->createArgs.outStreamInfo[streamId].pitch[1] /= 2;
 	}
-	
+
 	pObj->createArgs.rszPrms.rPrms[streamId].posPrms.startX = pOutDataFmt->startX;
 	pObj->createArgs.rszPrms.rPrms[streamId].posPrms.startY = pOutDataFmt->startY;
-	
+
     /* unlock driver instance */
-    Iss_captUnlock(pObj);	
-		
+    Iss_captUnlock(pObj);
+
 	/* Reset and Restart capture */
 	Iss_captResetAndRestart(NULL);
-		
-    return status;	
-} 
+
+    return status;
+}
 
 /* Driver object lock */
 Int32 Iss_captLock(Iss_CaptObj * pObj)
@@ -4555,7 +4558,7 @@ Int32 Iss_captResetAndRestart(Iss_CaptOverFlowStatus * overFlowStatus)
 		isif_reg->CLDCOFST = 0;
 #else
     gIss_captCommonObj.pIssConfig->eMsbPos = MSP_IPIPE_BAYER_MSB_BIT11;
-#endif	
+#endif
 
     gIss_captCommonObj.pIssConfig->ptBsc = &(gIss_captCommonObj.pModuleInstance->tBscCfg);
     gIss_captCommonObj.pIssConfig->ptLsc2D->nHDirDataOffset = 16;
@@ -5346,7 +5349,7 @@ Int32 Issdrv_captSetRszCfg(
 		imgWidth = (scPrms->rPrms[0].outWidth *
 						VSTAB_SCALE_NUMERATOR)/VSTAB_SCALE_DENOMINATOR;
 	}
-	
+
     /* RSZ A configuration */
     rszASetOutConfig(scPrms->cropPrms.cropWidth - 2,
                      scPrms->cropPrms.cropHeight - 4,
@@ -5562,7 +5565,7 @@ Int32 Issdrv_getIsifConfig(Iss_IspIsifCfg *isifCfg)
 	isifCfg->msbBitPos = ISS_ISIF_BAYER_MSB_POS_BIT13;
 #else
     isifCfg->msbBitPos = ISS_ISIF_BAYER_MSB_POS_BIT11;
-#endif	
+#endif
 
     return (status);
 }
@@ -5910,7 +5913,9 @@ Int32 Issdrv_setH3aConfig(Iss_IspH3aCfg *h3aCfg, UInt32 algInit)
     p2AObj->aewbPriority    = pObj->createArgs.aewbPriority;
     p2AObj->SensorHandle    = pObj->createArgs.SensorHandle;
     p2AObj->cameraVipHandle = pObj;
-
+#ifdef USE_2A_VER_DEV
+	p2AObj->aewbVendor 		= AEWB_ID_DEV;
+#endif
     gIss_captCommonObj.pIssConfig->eFH3aValidity =
         (MSP_PROC_H3A_VALID_ID) (MSP_PROC_H3A_VALID_AEWB |
                                  MSP_PROC_H3A_VALID_H3A |
@@ -6030,7 +6035,18 @@ Void Issdrv_captSetDefaultH3APrms()
 
     gIss_captCommonObj.pIssConfig->ptH3aAewbParams->nShiftValue = 0;
     gIss_captCommonObj.pIssConfig->ptH3aAewbParams->nSaturationLimit = 0x3FE;
-
+#ifdef USE_2A_VER_DEV
+	gIss_captCommonObj.pIssConfig->ptH3aAewbParams->ptAewbPaxelWin->nVCount = 32;
+    gIss_captCommonObj.pIssConfig->ptH3aAewbParams->ptAewbPaxelWin->nHCount = 48;
+    gIss_captCommonObj.pIssConfig->ptH3aAewbParams->ptAewbPaxelWin->nVSize = 32;
+    gIss_captCommonObj.pIssConfig->ptH3aAewbParams->ptAewbPaxelWin->nHSize = 32;
+    gIss_captCommonObj.pIssConfig->ptH3aAewbParams->ptAewbPaxelWin->nHIncr = 8;
+    gIss_captCommonObj.pIssConfig->ptH3aAewbParams->ptAewbPaxelWin->nVIncr = 8;
+    gIss_captCommonObj.pIssConfig->ptH3aAewbParams->ptAewbPaxelWin->nVPos = 20;
+	gIss_captCommonObj.pIssConfig->ptH3aAewbParams->ptAewbPaxelWin->nHPos = 300;
+	gIss_captCommonObj.pIssConfig->ptH3aAewbParams->nShiftValue = 4;
+    gIss_captCommonObj.pIssConfig->ptH3aAewbParams->nSaturationLimit = 0x3F2;
+#endif
     if ((pObj->inFmt.dataFormat == FVID2_DF_BAYER_RAW) ||
         (pObj->inFmt.dataFormat == FVID2_DF_RAW))
     {
@@ -6103,6 +6119,9 @@ Void Issdrv_captSetDefaultH3APrms()
     p2AObj->aewbNumWinH     = gIss_captCommonObj.pIssConfig->ptH3aAewbParams->ptAewbPaxelWin->nHCount;
     p2AObj->aewbNumWinV     = gIss_captCommonObj.pIssConfig->ptH3aAewbParams->ptAewbPaxelWin->nVCount;
     p2AObj->aewbVendor      = (AEWB_VENDOR)pObj->createArgs.aewbVendor;
+#ifdef USE_2A_VER_DEV
+	p2AObj->aewbVendor		= AEWB_ID_DEV;
+#endif
     p2AObj->aewbMode        = pObj->createArgs.aewbMode;
     p2AObj->aewbModeFlag    = 1;
     p2AObj->aewbPriority    = pObj->createArgs.aewbPriority;
@@ -6148,6 +6167,9 @@ Void IssCdrv_setIpipeCfg()
     ipipe_reg->SRC_COL = 0x4E;
 #elif defined IMGS_SONY_IMX140
     ipipe_reg->SRC_COL = 0x4E;
+#elif defined IMGS_SONY_IMX291
+    ipipe_reg->SRC_COL = 0xE4;
+
 #elif defined IMGS_ALTASENS_AL30210
     ipipe_reg->SRC_COL = 0x1B;
 #else
@@ -6238,7 +6260,7 @@ Void IssCdrv_setIpipeCfg()
 #if defined(APPRO_SENSOR_VENDOR) && defined(IMGS_SONY_IMX136)
 	gIss_captCommonObj.pIssConfig->eMsbPos = MSP_IPIPE_BAYER_MSB_BIT13;
 	isif_reg->CLDCOFST = 0;
-#endif	
+#endif
 
 }
 
