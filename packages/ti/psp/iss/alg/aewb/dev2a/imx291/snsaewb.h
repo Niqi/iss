@@ -10,13 +10,13 @@ extern "C" {
 /*  */
 typedef struct tagStPgApiEwfiPrerunParam
 {
-  unsigned char ucSensrChipId;
-  unsigned char ucAewbVendor;
-  unsigned char ucSensrEnable;
-  unsigned char ucSensrFovMod;
-  unsigned char ucSensrBinMod;
-  unsigned char ucSensrFovFps;
-  unsigned char ucSysPowerHzMod;
+	unsigned char ucSensrChipId;
+	unsigned char ucAewbVendor;
+	unsigned char ucSensrEnable;
+	unsigned char ucSensrFovMod;
+	unsigned char ucSensrBinMod;
+	unsigned char ucSensrFovFps;
+	unsigned char ucSysPowerHzMod;
 }StPgApiEwfiPrerunParam;
 
 /*  */
@@ -144,6 +144,13 @@ eWbCtrlMode_PL2,
 */
 int SnAewb_UiSetWbCtrlMode(int rsiWbCtrlMode);
 int SnAewb_UiGetWbCtrlMode(void);
+
+/* 获取当前图像环境的亮度值 */
+int SnAewb_UiGetLv();
+int SnAewb_UiGetIso();
+
+/* 设置曝光调节速度, 默认3帧,取值范围1-100帧*/
+int SnAewb_UiSetEwfiSpeed(int rsiEwfiSpeed);
 
 #ifdef __cplusplus
 }
